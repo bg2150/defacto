@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  ticker: MyString
+  description: MyText
+  size: MyString
+  url: MyString
+  board_members: 1
+  avg_compensation: 1
+
+two:
+  name: MyString
+  ticker: MyString
+  description: MyText
+  size: MyString
+  url: MyString
+  board_members: 1
+  avg_compensation: 1

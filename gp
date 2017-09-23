@@ -1,3 +1,3 @@
 git add -A
-git commit -m "init commit defacto"
-git push -u origin master
+git commit -m "init setup"
+git push origin master
