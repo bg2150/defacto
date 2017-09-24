@@ -1,0 +1,31 @@
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-4">
+        <h1>
+          DeFacto 
+        </h1>
+      </div>
+      <div class="col-lg-8 col-sm-8">
+        <ol class="breadcrumb pull-right">
+          <li>
+            <%= link_to "Add A Company", new_company_path %>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <%= simple_form_for @company do |form| %>
+    <%= form.input :name %>
+    <%= form.input :ticker %>
+    <%= form.input :description %>
+    <%= form.input :size %>
+    <%= form.input :url %>
+    <%= form.input :board_members %>
+    <%= form.input :avg_compensation %>
+    <%= form.submit "Create Company", class: "btn btn-warning" %>
+    <% end %>
+</div>
+

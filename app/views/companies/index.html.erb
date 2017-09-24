@@ -1,0 +1,47 @@
+
+  <div class="breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-4">
+        <h1>
+          DeFacto 
+        </h1>
+      </div>
+      <div class="col-lg-8 col-sm-8">
+        <ol class="breadcrumb pull-right">
+          <li>
+            <%= link_to "Add A Company", new_company_path %>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--breadcrumbs end-->
+
+<div class='container'>
+  <div class="row">
+    <div class="col-md-9">
+<!--<%= render "companies/slider" %>  -->
+</div>
+    <div class="container">
+<h3>Search DeFacto<br /><small> Company Search Tool</small></h3><hr>
+    <%= form_tag search_companies_path, method: :get do |f| %>
+    <div style="padding-bottom: 50px;" class="col-md-4">
+    <%= text_field_tag :search, nil, placeholder: "Company Name?" %>
+    </div>
+    <div style="padding-bottom: 50px;" class="col-md-4">
+    <%= text_field_tag :location, nil, placeholder: "Ticker?" %>
+    </div>
+    <%= select_tag :sector, 
+        options_for_select(Sector.all.map{ |sector| [sector.name, sector.id]}) %>
+    <%= submit_tag 'Search', class: "btn btn-info" %>
+    <% end %>
+
+  </div>
+</div>
+
+
+</div> <!--container end-->
